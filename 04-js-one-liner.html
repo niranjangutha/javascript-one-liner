@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Destructuring</title>
+</head>
+
+<body>
+    <script>
+
+        const numbers = [1, 2, 3, 4, 5, 6, 7];
+        // without destructuring
+        console.log("numbers[0]: ",numbers[0]);
+        console.log("numbers[1]: ",numbers[1]);
+        console.log("numbers[2]: ",numbers[2]);
+        console.log("numbers[3]: ",numbers[3]);
+
+        //with destructruring
+        const [first,second,,fourth]= numbers;
+        console.log("first: ",first);
+        console.log("second: ", second);
+        console.log("fourth: ",fourth);
+
+
+    </script>
+
+
+
+</body>
+
+</html>
