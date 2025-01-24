@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object destructruing</title>
+</head>
+
+<body>
+    <SCript>
+        var person = { firstname: "niranjan", lastname: "gutha", designation: "software developper", companyname: "XYZ" }
+        // while retiving the key from object we have to take object name as reference.
+        // having bulk keys in object and used some specified keys but we have to maintain the entire object in the entire execution of code.
+        console.log(`My name is ${person.firstname} and designation was ${person.designation}`);
+
+        // Obect Destructuring 
+        // this will make easier to copy the key values to another variable, insted of object reference we use the direct variable in the code.
+        // we can make alias names for the variables also, using : between the originalname and aliasname.
+
+        var { firstname: name, designation } = person;
+
+        console.log(`My name is ${name} and designation was ${designation}`);
+
+
+    </SCript>
+
+</body>
+
+</html>
