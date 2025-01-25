@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>is value is object</title>
+</head>
+<body>
+    <script>
+        // identify weather the given varibale is object or not 
+        var myObject =  {name : "niranjan", age : 30};
+        //var myObject =  [];
+        var result = myObject !== null && typeof myObject ==="object";
+
+        console.log(result);
+
+        //NOTE  : when we use the array data also it will return as Object.
+        //use the below code for identify weather the variable is array or not ?
+        var myObject =  [1,2,3,4];
+
+        console.log(Array.isArray(myObject));
+
+
+    </script>
+    
+</body>
+</html>
