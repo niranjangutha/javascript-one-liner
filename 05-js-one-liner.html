@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>isNullOrUndefined</title>
+</head>
+
+<body>
+
+    <script>
+        var myName = "niranjan";
+        // we have to validate the varibale value when ever we  need like this 
+        var result = myName === undefined || myName === null ? null : myName;
+
+        // create a function to validate the varibale as null or undefined
+        // this will use for code reusabily and will make easy ti find 
+
+        var isNullOrUndefined = (value)=> value === undefined || value === null ? true : false;
+        console.log(isNullOrUndefined(myName));
+
+        // validate the varible in if condition to to find weather the variable is empty,null and undefined.
+        
+        if(myName) console.log("Myname :",myName);
+        else console.log("false");
+
+    </script>
+
+</body>
+
+</html>
