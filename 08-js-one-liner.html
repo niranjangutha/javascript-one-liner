@@ -5,15 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random number generation</title>
+    <script>
+        // Function that processes input values
+        function calculateResult() {
+            // Get the input values from the text fields
+            var value1 = document.getElementById('input1').value;
+            var value2 = document.getElementById('input2').value;
+
+            
+            value1 = parseInt(value1);
+            value2 = parseInt(value2);
+            if(value1 >value2){
+                [value2,value1]= [value1,value2];
+            }
+
+            var result = randomnumber(value1,value2);
+            console.log(result);
+
+            // Display the result in the result text box
+            document.getElementById('resultBox').value = result;
+        }
+
+        function randomnumber(min, max){
+           return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+    </script>
+
 </head>
 
 <body>
-    <script>
-        getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1))+ min;
+    <h2>Enter Two Numbers and Get the Random Number</h2>
 
-        console.log(getRandomNumber(10, 100));
+    <!-- First Text Input -->
+    <label for="input1">Value 1:</label>
+    <input type="text" id="input1" placeholder="Enter first number">
+    <br><br>
 
-    </script>
+    <!-- Second Text Input -->
+    <label for="input2">Value 2:</label>
+    <input type="text" id="input2" placeholder="Enter second number">
+    <br><br>
+
+    <!-- Button to trigger the calculation -->
+    <button onclick="calculateResult()">Calculate</button>
+
+    <br><br>
+
+    <!-- Text Box to show the result -->
+    <label for="resultBox">Result:</label>
+    <input type="text" id="resultBox" readonly>
+    </div>
 
 </body>
 
