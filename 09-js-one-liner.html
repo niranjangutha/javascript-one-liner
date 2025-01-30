@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array range</title>
+</head>
+
+<body>
+    <script>
+        const generateArrayRange = (start, end) => Array.from({ length: end - start + 1 }, (_, index) => start + index);
+        
+        let arrayvaluesfrom = generateArrayRange(10, 15);
+        console.log(arrayvaluesfrom);
+
+    </script>
+
+</body>
+
+</html>
